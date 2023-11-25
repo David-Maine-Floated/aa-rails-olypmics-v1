@@ -1,0 +1,11 @@
+<h1>All the Gardens!</h1>
+<ul>
+  <% @gardens.each do |garden| %>
+    <li>
+      <a href="<%= garden_url(garden) %>"><%= garden.name %></a>
+    </li>
+  <% end %>
+  <form action="<%= new_garden_url %>" method="GET">
+    <button type="submit">New Garden</button>
+  </form>
+</ul>
